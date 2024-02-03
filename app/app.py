@@ -42,11 +42,28 @@ app.config['SECRET_KEY'] = 'thisisthesecretkey'
 
 
 oauth = OAuth(app)
+# google = oauth.register(
+#     name='google',
+#     client_id='921187902807-i5v5h4fp5p939dnf8ffg060i9u3skblo.apps.googleusercontent.com',
+#     client_secret='aWltftyw_r8czdGtpH69ZD4x',
+#     access_token_url='https://accounts.google.com/o/oauth2/token',
+#     access_token_params=None,
+#     authorize_url='https://accounts.google.com/o/oauth2/auth',
+#     authorize_params=None,
+#     api_base_url='https://www.googleapis.com/oauth2/v1/',
+#     userinfo_endpoint='https://openidconnect.googleapis.com/v1/userinfo',  # This is only needed if using openId to fetch user info
+#     client_kwargs={'scope': 'openid email profile'},
+#     jwks_uri= "https://www.googleapis.com/oauth2/v3/certs"
+# )
+
+
+
+#new for drive
 google = oauth.register(
     name='google',
-    client_id='921187902807-i5v5h4fp5p939dnf8ffg060i9u3skblo.apps.googleusercontent.com',
-    client_secret='aWltftyw_r8czdGtpH69ZD4x',
-    access_token_url='https://accounts.google.com/o/oauth2/token',
+    client_id='496128613823-ktkpf79evotem5k32fgbb77uad9o40tr.apps.googleusercontent.com',
+    client_secret='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',
+    access_token_url='https://oauth2.googleapis.com/token',
     access_token_params=None,
     authorize_url='https://accounts.google.com/o/oauth2/auth',
     authorize_params=None,
@@ -55,20 +72,6 @@ google = oauth.register(
     client_kwargs={'scope': 'openid email profile'},
     jwks_uri= "https://www.googleapis.com/oauth2/v3/certs"
 )
-
-
-# oauth.register(
-#     name="google",
-#     client_id = "your client id",
-#     client_secret= "your client secret",
-#     access_token_url= "https://www.googleapis.com/oauth2/v4/token",
-#     access_token_params=None,
-#     authorize_url= "https://accounts.google.com/o/oauth2/v2/auth",
-#     authorize_params=None,
-#     api_base_url= "https://www.googleapis.com/oauth2/v3/",
-#     client_kwargs= {"scope": "openid email profile"},
-#     server_metadata_url= 'https://accounts.google.com/.well-known/openid-configuration'
-# )
 
 
 def token_required(f):
