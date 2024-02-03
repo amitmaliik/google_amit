@@ -3,3 +3,4 @@ Flask-WTF
 Flask-Session
 Authlib
 python-dotenv
+requests
