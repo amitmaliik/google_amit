@@ -10,7 +10,7 @@ import jwt
 from functools import wraps
 
 # decorator for routes that should be accessible only by logged in users
-from auth_decorator import login_required
+#from auth_decorator import login_required
 from datetime import datetime as datetime1
 
 # dotenv setup
