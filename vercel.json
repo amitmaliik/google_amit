@@ -1,8 +1,8 @@
 {
   "builds": [
     {
-      "src": "app/app.py",  // Replace with the entry point of your Flask app
-      "use": "@vercel/python"  // Use the Python builder
+      "src": "app/app.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
